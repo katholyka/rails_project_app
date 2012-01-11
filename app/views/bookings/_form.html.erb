@@ -1,0 +1,47 @@
+<%= form_for(@booking) do |f| %>
+  <% if @booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+      <% @booking.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_start %><br />
+    <%= f.datetime_select :date_start %>
+  </div>
+  <div class="field">
+    <%= f.label :date_end %><br />
+    <%= f.datetime_select :date_end %>
+  </div>
+  <div class="field">
+    <%= f.label :payement_count %><br />
+    <%= f.text_field :payement_count %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_id %><br />
+    
+    <%= collection_select(:booking, :customer_id, @customers, :id, :last_name)%>
+  </div>
+  <div class="field">
+    <%= f.label :mechanic_id %><br />
+    
+    <%= f.text_field :mechanic_id%>
+
+    <%= collection_select(:booking, :mechanic_id, Mechanic.all, :id, :mechanic_name) %>
+  </div>
+  <div class="field">
+    <%= f.label :car_id %><br />
+    
+    <%= f.text_field :car_id%>
+    
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

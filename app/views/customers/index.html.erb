@@ -1,0 +1,35 @@
+<h1>Listing customers</h1>
+
+<table border="1">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Gender</th>
+    <th>Email</th>
+    <th>Phone number</th>
+    <th>Address</th>
+    <th>Details</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @customers.each do |customer| %>
+  <tr>
+    <td><%= customer.first_name %></td>
+    <td><%= customer.last_name %></td>
+    <td><%= customer.gender %></td>
+    <td><%= customer.email %></td>
+    <td><%= customer.phone_number %></td>
+    <td><%= customer.address %></td>
+    <td><%= customer.details %></td>
+    <td><%= link_to 'Show', customer %></td>
+    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+    <td><%= link_to 'Destroy', customer, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @customers %>
+<br />
+
+<%= link_to 'New Customer', new_customer_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Model name:</b>
+  <%= @model.model_name %>
+</p>
+
+<p>
+  <b>Date create:</b>
+  <%= @model.date_create %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%= @model.details %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%= @model.manufacturer.manufacturer_name %>
+</p>
+
+<%= link_to 'Edit', edit_model_path(@model) %> |
+<%= link_to 'Back', models_path %>

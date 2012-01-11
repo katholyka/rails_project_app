@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  manufacturer_name: MyString
+  details: MyText
+
+two:
+  manufacturer_name: MyString
+  details: MyText

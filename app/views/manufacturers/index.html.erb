@@ -1,0 +1,25 @@
+<h1>Listing manufacturers</h1>
+
+<table>
+  <tr>
+    <th>Manufacturer name</th>
+    <th>Details</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @manufacturers.each do |manufacturer| %>
+  <tr>
+    <td><%= manufacturer.manufacturer_name %></td>
+    <td><%= manufacturer.details %></td>
+    <td><%= link_to 'Show', manufacturer %></td>
+    <td><%= link_to 'Edit', edit_manufacturer_path(manufacturer) %></td>
+    <td><%= link_to 'Destroy', manufacturer, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @manufacturers %>
+<br />
+
+<%= link_to 'New Manufacturer', new_manufacturer_path %>

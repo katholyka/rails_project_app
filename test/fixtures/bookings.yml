@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date_start: 2011-11-30
+  date_end: 2011-11-30
+  payement_count: 1
+  mechanic_id: 1
+  car_id: 1
+  customer_id: 1
+
+two:
+  date_start: 2011-11-30
+  date_end: 2011-11-30
+  payement_count: 1
+  mechanic_id: 1
+  car_id: 1
+  customer_id: 1

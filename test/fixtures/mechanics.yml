@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  mechanic_name: MyString
+  phone_number: MyString
+  details: MyText
+  booking_id: 1
+
+two:
+  mechanic_name: MyString
+  phone_number: MyString
+  details: MyText
+  booking_id: 1

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  engine_size: 1
+  model_id: 1
+  customer_id: 1
+  details: MyText
+
+two:
+  engine_size: 1
+  model_id: 1
+  customer_id: 1
+  details: MyText

@@ -1,0 +1,29 @@
+<h1>Listing models</h1>
+
+<table>
+  <tr>
+    <th>Model name </th>
+    <th>Date create</th>
+    <th>Manufacturer </th>
+    <th>Details</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @models.each do |model| %>
+  <tr>
+    <td><%= model.model_name %></td>
+    <td><%= model.date_create %></td>
+    <td><%= model.manufacturer.manufacturer_name %></td>
+    <td><%= model.details %></td>
+    <td><%= link_to 'Show', model %></td>
+    <td><%= link_to 'Edit', edit_model_path(model) %></td>
+    <td><%= link_to 'Destroy', model, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @models %>
+<br />
+
+<%= link_to 'New Model', new_model_path %>

@@ -1,0 +1,39 @@
+<%= form_for(@model) do |f| %>
+  <% if @model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@model.errors.count, "error") %> prohibited this model from being saved:</h2>
+
+      <ul>
+      <% @model.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :model_name %><br />
+    <%= f.text_field :model_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_create %><br />
+    <%= f.datetime_select :date_create %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :manufacturer_id %><br />
+    
+    <%= collection_select(:model, :manufacturer_id, @manufacturers, :id, :manufacturer_name)%>
+  </div>
+
+  <div class="field">
+    <%= f.label :details %><br />
+    <%= f.text_area :details %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

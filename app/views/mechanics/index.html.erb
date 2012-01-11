@@ -1,0 +1,29 @@
+<h1>Listing mechanics</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Phone number</th>
+    <th>Booking</th>
+    <th>Details</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mechanics.each do |mechanic| %>
+  <tr>
+    <td><%= mechanic.mechanic_name %></td>
+    <td><%= mechanic.phone_number %></td>
+    <td><%= mechanic.booking_id %></td>
+    <td><%= mechanic.details %></td>
+    <td><%= link_to 'Show', mechanic %></td>
+    <td><%= link_to 'Edit', edit_mechanic_path(mechanic) %></td>
+    <td><%= link_to 'Destroy', mechanic, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @mechanics %>
+<br />
+
+<%= link_to 'New Mechanic', new_mechanic_path %>

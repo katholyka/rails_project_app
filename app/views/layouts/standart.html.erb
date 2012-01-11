@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab3App</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<table>
+<tr>
+    <th> Customers </th>
+    <th> Bookings  </th>
+    <th> Cars      </th>
+    <th> Manufacturers </th>
+    <th> Mechanics </th>
+    <th> Models </th>
+</tr>
+<%= yield %>
+
+<table>
+</body>
+</html>
