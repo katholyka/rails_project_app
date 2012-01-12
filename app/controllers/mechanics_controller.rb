@@ -1,5 +1,8 @@
 class MechanicsController < ApplicationController
 
+before_filter :authenticate_user!
+load_and_authorize_resource
+
 def index
     @mechanics=Mechanic.paginate(:page => params[:page], :per_page => 10)
 

@@ -1,6 +1,10 @@
 class CustomersController < ApplicationController
+#before_filter :authenticate_user!
+before_filter :authenticate_user!
+load_and_authorize_resource
 
 layout 'application'
+
 
 def index
 

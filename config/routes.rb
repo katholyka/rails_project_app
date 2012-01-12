@@ -1,5 +1,5 @@
 Lab3App::Application.routes.draw do
-  devise_for :users #,  :controllers => { :registrations => "users/registrations", :users => "users/users" }
+  devise_for :users #,  :controllers => { :registrations => "users/registrations"}
 
   resources :customers
   resources :bookings
@@ -10,8 +10,8 @@ Lab3App::Application.routes.draw do
 
   resources :users
   resources :roles
-  #root :to => "welcome#index"
-  root :to => "customers#index"
+  root :to => "home#index"
+  #root :to => "customers#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

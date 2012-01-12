@@ -1,5 +1,8 @@
 class ModelsController < ApplicationController
 
+before_filter :authenticate_user!
+load_and_authorize_resource
+
 def index
     @models=Model.paginate(:page => params[:page], :per_page => 10)
 

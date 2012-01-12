@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-
+load_and_authorize_resource
 def index
     @bookings=Booking.paginate(:page => params[:page], :per_page => 10)
 
